@@ -27,7 +27,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: YOUR_DOMAIN.COM
+  - host: ibrdb.audocdr25.com
     http:
       paths:
         - pathType: Prefix
