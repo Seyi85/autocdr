@@ -56,6 +56,6 @@ spec:
     spec:
       containers:
       - name: cdr-app
-        image: iaanimashaun/cdr:latest
+        image: seyipaul/autocdr:latest
         ports:
         - containerPort: 5000
