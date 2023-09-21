@@ -15,28 +15,7 @@ spec:
     targetPort: 5000
   selector:
     app: cdr-app
-  type: ClusterIP
----
-
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: cdr-app-ingress
-  namespace: cdr-app
-  annotations:
-    kubernetes.io/ingress.class: nginx
-spec:
-  rules:
-  - host: ibrdb.audocdr25.com
-    http:
-      paths:
-        - pathType: Prefix
-          backend:
-            service:
-              name: cdr-app-svc
-              port:
-                number: 80
-          path: /
+  type: LoadBalancer
 ---
 
 apiVersion: apps/v1
